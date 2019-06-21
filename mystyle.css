@@ -1,0 +1,28 @@
+body{
+		overflow: auto;
+		text-align: center;
+		padding-top: 50px;
+		background-color:white;
+		font-family: "Verdana", Sans-serif;
+		font-weight: bold;
+}
+h1{
+	padding-top:0px;
+	text-align: center;
+	color:black;
+	margin-left: 20px;
+}
+em{
+	color: #F74B84; /*pinkish*/
+}
+h2{
+	padding-top:0px;
+	padding-bottom:100px;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover{
+	text-shadow:1px 1px black;
+}
