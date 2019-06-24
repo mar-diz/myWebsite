@@ -17,12 +17,22 @@ em{
 }
 h2{
 	padding-top:0px;
-	padding-bottom:100px;
+	padding-bottom:25px;
 }
+
 a{
+	/* inherits the previous color - basically removes when you hyperlink something and turns to blue with underlines*/
 	color: inherit;
 	text-decoration: none;
 }
+
+/* does something when hover'd over */
 a:hover{
-	text-shadow:1px 1px black;
+	text-shadow:.5px .5px black;
+}
+
+img{
+	border-radius:8px;
+	width:50%;
+	height:50%;
 }
