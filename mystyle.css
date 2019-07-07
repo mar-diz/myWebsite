@@ -1,36 +1,37 @@
 body{
 		overflow: auto;
-		text-align: center;
-		padding-top: 50px;
-		background-color:white;
 		font-family: "Verdana", Sans-serif;
 		font-weight: bold;
-}
-h1{
-	padding-top:0px;
-	text-align: center;
-	color:black;
-	margin-left: 20px;
-}
-em{
-	color: #F74B84; /*pinkish*/
-}
-h2{
-	padding-top:0px;
-	padding-bottom:25px;
+		background-color: #00151f;
+	}
+
+.header{
+	position: fixed;
+	border:	1px solid #ccc;
+	border-radius: 10px;
+  /*position of element */
+	top:0px;
+	left:0px;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
+
+.main{
+	text-align: center;
+	padding: 16px;
+  margin-top: 30px;
+}
 a{
 	/* inherits the previous color - basically removes when you hyperlink something and turns to blue with underlines*/
 	color: inherit;
 	text-decoration: none;
 }
-
 /* does something when hover'd over */
 a:hover{
 	text-shadow:.5px .5px black;
 }
-
 img{
 	border-radius:8px;
 	width:50%;
@@ -40,27 +41,21 @@ img{
 
 
 
-/* Night Mode Experimenting */
-/*
-body
-{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    transition: 0.5s;
-}*/
+/* Night Mode  */
+
 body.night
 {
-    background: #00151f;
+		background: #fff;
+    /* background: #00151f; */
 }
 
 .toggle
 {
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 50px;
-    background: #fff;
-    border: 2px solid #00151f;
+    background: #00151f;
+    border: 2px solid #fff;
     width: 45px;
     height: 20px;
     cursor: pointer;
@@ -69,8 +64,8 @@ body.night
 }
 .toggle.active
 {
-    background: #00151f;
-    border: 2px solid #fff;
+    background: #fff;
+    border: 2px solid #00151f;
 }
 .toggle:before
 {
@@ -80,14 +75,14 @@ body.night
     left: 2px;
     width: 16px;
     height: 16px;
-    background: #00151f;
+    background: #fff;
     border-radius: 50%;
     transition: 0.5s;
 }
 .toggle.active:before
 {
     left: 27px;
-    background: #fff;
+    background: #00151f;
 }
 .content
 {
@@ -98,19 +93,19 @@ body.night
 {
     margin: 0 0 20px;
     padding: 0;
-    color: #000;
+    color: #fff;
     transition: 0.5s;
 }
 .content p
 {
     margin: 0;
     padding: 0;
-    color: #000;
+    color: #fff;
     transition: 0.5s;
     font-size: 18px;
 }
 body.night .content h1,
 body.night .content p
 {
-    color: #fff;
+    color: #00151f;
 }
