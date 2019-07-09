@@ -5,7 +5,17 @@
 		<title>Marvin Dizon</title>
 	</head>
 
-	<body>
+	<script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+	<script type="text/javascript">
+		function initViz() {
+			var containerDiv = document.getElementById("vizContainer"),
+			url = "https://public.tableau.com/views/myTime/Sheet1?:embed=y&:display_count=yes&publish=yes&:origin=viz_share_link";
+			var viz = new tableau.Viz(containerDiv, url);
+		}
+	</script>
+
+
+	<body onload="initViz();">
 		<!-- Just testing this thumbnail id, of making it look like a card?
 		<div id="thumbnail"> -->
 		<!-- this is related to dark mode toggle -->
@@ -30,8 +40,20 @@
 			I received my B.S. in Computer Science in May of 2017.<br>
 		</p>
 
-		</div>
 
+		<h1 style="text-align:center;padding-top: 100px;"> PROJECTS</h1>
+			<p> <em style="color: pink;font-size: 150%;"> myTime</em>
+			is my personal time management software which tracks the amount
+			of time, by hour, of which I do certain day-to-day tasks. This helps me see
+			what tasks I need to either focus on, or do less of! The Alpha version of myTime
+			utilizes an embedded sqlite3 database where I use Tableau and it's JavaScript API
+			to embed the data visualization onto this page!
+		</p>
+
+		<div id="vizContainer" style="padding-top: 15px;"></div>
+
+
+		</div>
 		</div>
 
 		<!-- Using Jquery for night mode -->

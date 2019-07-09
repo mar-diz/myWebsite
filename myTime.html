@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript">
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+      url = "https://public.tableau.com/views/myTime/Sheet1?:embed=y&:display_count=yes&publish=yes&:origin=viz_share_link";
+      var viz = new tableau.Viz(containerDiv, url);
+    }
+  </script>
+</head>
+<body style="font-family: Nunito" onload="initViz();">
+  <h1> My first tableau JavaScript API Work</h1>
+  <div id="vizContainer"></div>
+
+</body>
+</html>
