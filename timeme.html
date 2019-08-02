@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="mystyle.css">
+		<title>Marvin Dizon</title>
+    </head>
+    
+    <style> 
+        input {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 2px solid blue;
+          border-radius: 4px;
+        }
+    </style>
+
+    <script>
+    function callMyWebApp(url){
+        var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, true ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+    }
+    </script>
+        
+
+	<body>
+		<div class="header">
+		<div class="toggle"></div>
+
+		<h1>
+			<a href="index.html"> ABOUT </a>
+			<a href="Marvin Dizon Resume.pdf" download> RESUME </a>
+			<a href="https://www.linkedin.com/in/marvin-dizon-47a614126/" target="_blank"> LINKEDIN </a>
+			<a href="travel.html"> TRAVEL</a>
+		</h1>
+        </div>
+        
+		<div class="content">
+
+		<div class="main">        
+		
+        
+        <form>
+            <label for="activity">ACTIVITY</label>
+            <input type="text" id="activity" name="activity">
+            <label for="time">TIME</label>
+            <input type="number" id="time" name="time">
+            <label for="date">DATE</label>
+            <input type="date" name="date" id="date">
+
+          </form>
+
+
+        <button onclick="callMyWebApp('http://35.183.236.197/test')"> Click me </button>
+        
+
+        <form action="http://35.183.236.197/test" method="POST">
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+           <button type="submit">Send to backend</button>
+          </form>
+        </div>
+        
+		</div>
+
+		<!-- Using Jquery for night mode -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+    	$(document).ready(function(){
+        	$('.toggle').click(function(){
+            	$('.toggle').toggleClass('active')
+            	$('body').toggleClass('night')
+        	})
+    	})
+		</script>
+
+	</body>
+</html>
