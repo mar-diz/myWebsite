@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="mystyle.css">
+		<title>Marvin Dizon</title>
+    </head>
+  	<body>
+		<div class="header">
+		<div class="toggle"></div>
+
+		<h1>
+			<a href="index.html"> ABOUT </a>
+			<a href="Marvin Dizon Resume.pdf" download> RESUME </a>
+			<a href="https://www.linkedin.com/in/marvin-dizon-47a614126/" target="_blank"> LINKEDIN </a>
+			<a href="travel.html"> TRAVEL</a>
+		</h1>
+        </div>
+        
+		<div class="content">
+		<div class="main">     
+        <form action="http://35.183.236.197/test" method="POST">
+            ACTIVITY: <input type="text" id="activity" name="activity">
+            TIME: <input type="number" step="0.1" min=0 id="time" name="time">
+            DATE: <input type="date" name="date" id="date">
+            <button type ="submit"> Send to backend </button>
+          </form>
+        </div>  
+        
+		</div>
+
+		<!-- Using Jquery for night mode -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+    	$(document).ready(function(){
+        	$('.toggle').click(function(){
+            	$('.toggle').toggleClass('active')
+            	$('body').toggleClass('night')
+        	})
+    	})
+		</script>
+
+	</body>
+</html>
